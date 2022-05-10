@@ -10,7 +10,7 @@ Author URI: https://virtualbyvario.com
 
 
 // Create a new user role
-function nli_new_role() {  
+function vario_nli_new_role() {  
  
     //add the new user role
     add_role(
@@ -20,7 +20,7 @@ function nli_new_role() {
     );
  
 }
-add_action('admin_init', 'nli_new_role');
+add_action('admin_init', 'vario_nli_new_role');
  
 
 add_action( 'user_register', function( $user_id ) {
