@@ -14,7 +14,7 @@ function vario_nli_new_role() {
  
     //add the new user role
     add_role(
-        'never_logged_in',
+        'never-logged-in',
         'Never Logged In',
         array()
     );
@@ -25,12 +25,12 @@ add_action('admin_init', 'vario_nli_new_role');
 
 add_action( 'user_register', function( $user_id ) {
   $user = get_user_by( 'ID', $user_id );
-    $user->add_role( 'never_logged_in' );
+    $user->add_role( 'never-logged-in' );
 });
 
 function vario_remove_nli( $user_login, $user ) {
         //remove the Never Logged In user role if they have it
-		$user->remove_role( 'never_logged_in' );
+		$user->remove_role( 'never-logged-in' );
 }
 add_action('wp_login', 'vario_remove_nli', 10, 2);
 
